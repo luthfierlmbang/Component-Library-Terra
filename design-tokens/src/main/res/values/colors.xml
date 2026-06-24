@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primitive neutral -->
+    <color name="terra_color_grey_50">#FFFFFF</color>
+    <color name="terra_color_grey_100">#EBF0F4</color>
+    <color name="terra_color_grey_200">#EDEDED</color>
+    <color name="terra_color_grey_300">#DADADA</color>
+    <color name="terra_color_grey_400">#CCCCCC</color>
+    <color name="terra_color_grey_500">#999999</color>
+    <color name="terra_color_grey_600">#7A7D7F</color>
+    <color name="terra_color_grey_700">#555555</color>
+    <color name="terra_color_grey_800">#333333</color>
+    <color name="terra_color_grey_900">#000000</color>
+
+    <!-- Primitive surface -->
+    <color name="terra_color_surface_blue_50">#F5FAFE</color>
+    <color name="terra_color_surface_pink_50">#FFF8F8</color>
+
+    <!-- Primitive overlay -->
+    <color name="terra_color_overlay_black_50">#80000000</color>
+
+    <!-- Primitive shadow -->
+    <color name="terra_color_shadow_black_12">#1F000000</color>
+
+    <!-- Primitive brand orange -->
+    <color name="terra_color_orange_50">#FFF5ED</color>
+    <color name="terra_color_orange_100">#FDE8D6</color>
+    <color name="terra_color_orange_200">#FBCFA8</color>
+    <color name="terra_color_orange_300">#F8B67B</color>
+    <color name="terra_color_orange_400">#F69C4D</color>
+    <color name="terra_color_orange_500">#F4831F</color>
+    <color name="terra_color_orange_600">#D2711B</color>
+    <color name="terra_color_orange_700">#B15F16</color>
+    <color name="terra_color_orange_800">#8F4D12</color>
+    <color name="terra_color_orange_900">#6E3B0E</color>
+
+    <!-- Primitive brand teal -->
+    <color name="terra_color_teal_50">#EBF4F4</color>
+    <color name="terra_color_teal_100">#D9EAEB</color>
+    <color name="terra_color_teal_200">#B5D6D8</color>
+    <color name="terra_color_teal_300">#91C3C5</color>
+    <color name="terra_color_teal_400">#6DAFB2</color>
+    <color name="terra_color_teal_500">#4A9B9F</color>
+    <color name="terra_color_teal_600">#26888C</color>
+    <color name="terra_color_teal_700">#027479</color>
+    <color name="terra_color_teal_800">#015458</color>
+    <color name="terra_color_teal_900">#013436</color>
+
+    <!-- Primitive status yellow -->
+    <color name="terra_color_yellow_50">#FEF9ED</color>
+    <color name="terra_color_yellow_100">#FEF0D5</color>
+    <color name="terra_color_yellow_200">#FCE0A6</color>
+    <color name="terra_color_yellow_300">#FACF77</color>
+    <color name="terra_color_yellow_400">#F9BF48</color>
+    <color name="terra_color_yellow_500">#F7AE19</color>
+    <color name="terra_color_yellow_600">#D59616</color>
+    <color name="terra_color_yellow_700">#B37E12</color>
+    <color name="terra_color_yellow_800">#91660F</color>
+    <color name="terra_color_yellow_900">#6F4E0B</color>
+
+    <!-- Primitive status red -->
+    <color name="terra_color_red_50">#FEEFEF</color>
+    <color name="terra_color_red_100">#FCDADA</color>
+    <color name="terra_color_red_200">#F9B1B1</color>
+    <color name="terra_color_red_300">#F68888</color>
+    <color name="terra_color_red_400">#F25F5F</color>
+    <color name="terra_color_red_500">#EF3636</color>
+    <color name="terra_color_red_600">#CE2F2F</color>
+    <color name="terra_color_red_700">#AD2727</color>
+    <color name="terra_color_red_800">#8C2020</color>
+    <color name="terra_color_red_900">#6C1818</color>
+
+    <!-- Semantic background -->
+    <color name="terra_color_bg_default">@color/terra_color_grey_50</color>
+    <color name="terra_color_bg_surface_primary_default">@color/terra_color_grey_50</color>
+    <color name="terra_color_bg_surface_secondary_default">@color/terra_color_grey_200</color>
+    <color name="terra_color_bg_surface_secondary_hover">@color/terra_color_grey_100</color>
+    <color name="terra_color_bg_fill_primary_default">@color/terra_color_orange_500</color>
+    <color name="terra_color_bg_fill_primary_active">@color/terra_color_orange_500</color>
+    <color name="terra_color_bg_fill_secondary_default">@color/terra_color_teal_700</color>
+    <color name="terra_color_bg_fill_danger_default">@color/terra_color_red_500</color>
+    <color name="terra_color_bg_fill_warning_default">@color/terra_color_yellow_500</color>
+    <color name="terra_color_bg_disabled_default">@color/terra_color_grey_400</color>
+    <color name="terra_color_bg_overlay_default">@color/terra_color_overlay_black_50</color>
+
+    <!-- Semantic text -->
+    <color name="terra_color_text_primary_default">@color/terra_color_grey_800</color>
+    <color name="terra_color_text_primary_disabled">@color/terra_color_grey_400</color>
+    <color name="terra_color_text_secondary_default">@color/terra_color_grey_700</color>
+    <color name="terra_color_text_inverse_default">@color/terra_color_grey_50</color>
+    <color name="terra_color_text_action_primary_default">@color/terra_color_teal_700</color>
+    <color name="terra_color_text_action_danger_default">@color/terra_color_red_500</color>
+
+    <!-- Semantic border -->
+    <color name="terra_color_border_default">@color/terra_color_grey_200</color>
+    <color name="terra_color_border_secondary_default">@color/terra_color_grey_400</color>
+    <color name="terra_color_border_tertiary_default">@color/terra_color_grey_300</color>
+    <color name="terra_color_border_action_primary_default">@color/terra_color_teal_700</color>
+    <color name="terra_color_border_action_secondary_default">@color/terra_color_orange_500</color>
+    <color name="terra_color_border_disabled_default">@color/terra_color_grey_400</color>
+
+    <!-- Semantic icon -->
+    <color name="terra_color_icon_primary_default">@color/terra_color_grey_800</color>
+    <color name="terra_color_icon_secondary_default">@color/terra_color_grey_700</color>
+    <color name="terra_color_icon_secondary_hover">@color/terra_color_teal_700</color>
+    <color name="terra_color_icon_inverse_default">@color/terra_color_grey_50</color>
+    <color name="terra_color_icon_disabled_default">@color/terra_color_grey_400</color>
+</resources>

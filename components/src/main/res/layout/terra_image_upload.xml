@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/terraImageUploadLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:id="@+id/terraImageUploadFrame"
+        android:layout_width="match_parent"
+        android:layout_height="154dp"
+        android:layout_marginTop="4dp">
+
+        <ImageView
+            android:id="@+id/terraImageUploadPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/terraImageUploadEmptyState"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="62dp"
+            android:paddingTop="38dp"
+            android:paddingRight="62dp"
+            android:paddingBottom="28dp">
+
+            <ImageView
+                android:id="@+id/terraImageUploadCameraIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:importantForAccessibility="no" />
+
+            <com.terra.design.components.TerraButton
+                android:id="@+id/terraImageUploadPrimaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/terraImageUploadBottomActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#CCFFFFFF"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="1dp"
+            android:visibility="gone">
+
+            <com.terra.design.components.TerraButton
+                android:id="@+id/terraImageUploadSecondaryButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <View
+                android:id="@+id/terraImageUploadDivider"
+                android:layout_width="1dp"
+                android:layout_height="22dp"
+                android:layout_marginHorizontal="3dp"
+                android:background="@android:color/darker_gray"
+                android:visibility="gone" />
+
+            <com.terra.design.components.TerraButton
+                android:id="@+id/terraImageUploadTertiaryButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/terraImageUploadLoadingState"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#CCFFFFFF"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/terraImageUploadProgress"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/terraImageUploadLoadingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Dalam Proses..." />
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/terraImageUploadHelper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+</LinearLayout>

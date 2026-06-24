@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="terraRightIcon" format="reference" />
+
+    <declare-styleable name="TerraButton">
+        <attr name="android:text" />
+        <attr name="terraButtonType" format="enum">
+            <enum name="primary" value="0" />
+            <enum name="secondary" value="1" />
+            <enum name="outlinedPrimary" value="2" />
+            <enum name="outlinedSecondary" value="3" />
+            <enum name="danger" value="4" />
+            <enum name="textButton" value="5" />
+        </attr>
+        <attr name="terraButtonSize" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="small" value="1" />
+        </attr>
+        <attr name="terraLeftIcon" format="reference" />
+        <attr name="terraRightIcon" />
+    </declare-styleable>
+
+    <declare-styleable name="TerraMenuCard">
+        <attr name="android:text" />
+        <attr name="terraLeadIcon" format="reference" />
+        <attr name="terraRightIcon" />
+        <attr name="terraShowLeadIcon" format="boolean" />
+        <attr name="terraShowRightIcon" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TerraInformationCard">
+        <attr name="terraCardTitle" format="string" />
+        <attr name="terraProfileName" format="string" />
+        <attr name="terraProfileSubtitle" format="string" />
+        <attr name="terraStatusLabel" format="string" />
+        <attr name="terraInfoLabel1" format="string" />
+        <attr name="terraInfoValue1" format="string" />
+        <attr name="terraInfoLabel2" format="string" />
+        <attr name="terraInfoValue2" format="string" />
+        <attr name="terraButtonText" format="string" />
+        <attr name="terraShowProfile" format="boolean" />
+        <attr name="terraShowButton" format="boolean" />
+        <attr name="terraProfileImage" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="TerraActivityCard">
+        <attr name="terraLabelText" format="string" />
+        <attr name="terraLabelIcon" format="reference" />
+        <attr name="terraRightIcon" />
+        <attr name="terraActivityName" format="string" />
+        <attr name="terraActivityTime" format="string" />
+        <attr name="terraTimeIcon" format="reference" />
+        <attr name="terraActionText" format="string" />
+        <attr name="terraShowAction" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TerraChip">
+        <attr name="android:text" />
+        <attr name="terraChipSelected" format="boolean" />
+        <attr name="terraChipLeftIcon" format="reference" />
+        <attr name="terraChipRightIcon" format="reference" />
+        <attr name="terraChipShowLeftIcon" format="boolean" />
+        <attr name="terraChipShowRightIcon" format="boolean" />
+        <attr name="terraChipHasCounter" format="boolean" />
+        <attr name="terraChipCounterText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="TerraIncentiveMetricCard">
+        <attr name="terraMetricTitle" format="string" />
+        <attr name="terraMetricPeriod" format="string" />
+        <attr name="terraMetricAmount" format="string" />
+        <attr name="terraMetricLeadIcon" format="reference" />
+        <attr name="terraMetricRightIcon" format="reference" />
+        <attr name="terraMetricVariant" format="enum">
+            <enum name="customerActive" value="0" />
+            <enum name="totalDitabung" value="1" />
+            <enum name="pencairan" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TerraIncentiveInfoCard">
+        <attr name="terraInfoCardTitle" format="string" />
+        <attr name="terraInfoCardDescription" format="string" />
+        <attr name="terraInfoCardLeadIcon" format="reference" />
+        <attr name="terraInfoCardRightIcon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="TerraImageUpload">
+        <attr name="terraImageUploadLabel" format="string" />
+        <attr name="terraImageUploadHelperText" format="string" />
+        <attr name="terraImageUploadShowHelper" format="boolean" />
+        <attr name="terraImageUploadPrimaryActionText" format="string" />
+        <attr name="terraImageUploadSecondaryActionText" format="string" />
+        <attr name="terraImageUploadTertiaryActionText" format="string" />
+        <attr name="terraImageUploadLoadingText" format="string" />
+        <attr name="terraImageUploadPreviewSrc" format="reference" />
+        <attr name="terraImageUploadActionCount" format="integer" />
+        <attr name="terraImageUploadState" format="enum">
+            <enum name="imageUpload" value="0" />
+            <enum name="attachProcess" value="1" />
+            <enum name="imageAttached" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TerraLabelBadge">
+        <attr name="android:text" />
+        <attr name="terraLabelBadgeIcon" format="reference" />
+        <attr name="terraLabelBadgeShowIcon" format="boolean" />
+        <attr name="terraLabelBadgeState" format="enum">
+            <enum name="stateDefault" value="0" />
+            <enum name="secondary" value="1" />
+            <enum name="neutral" value="2" />
+            <enum name="failed" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TerraBottomNavBar">
+        <attr name="terraBottomNavHomeText" format="string" />
+        <attr name="terraBottomNavActivityText" format="string" />
+        <attr name="terraBottomNavNotificationText" format="string" />
+        <attr name="terraBottomNavHomeIcon" format="reference" />
+        <attr name="terraBottomNavActivityIcon" format="reference" />
+        <attr name="terraBottomNavNotificationIcon" format="reference" />
+        <attr name="terraBottomNavSelectedItem" format="enum">
+            <enum name="home" value="0" />
+            <enum name="activity" value="1" />
+            <enum name="notification" value="2" />
+            <enum name="none" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TerraSearchBar">
+        <attr name="android:text" />
+        <attr name="android:hint" />
+        <attr name="terraSearchBarTrailingIcon" format="reference" />
+        <attr name="terraSearchBarState" format="enum">
+            <enum name="stateDefault" value="0" />
+            <enum name="focus" value="1" />
+            <enum name="result" value="2" />
+            <enum name="disabled" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TerraRadioButton">
+        <attr name="android:text" />
+        <attr name="android:checked" />
+        <attr name="android:enabled" />
+        <attr name="terraRadioButtonShowLabel" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TerraCheckbox">
+        <attr name="android:text" />
+        <attr name="android:checked" />
+        <attr name="android:enabled" />
+        <attr name="terraCheckboxShowLabel" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TerraTextField">
+        <attr name="android:text" />
+        <attr name="android:hint" />
+        <attr name="terraTextFieldType" format="enum">
+            <enum name="typeDefault" value="0" />
+            <enum name="textPrefix" value="1" />
+            <enum name="textSuffix" value="2" />
+            <enum name="textPrefixIconPrefix" value="3" />
+        </attr>
+        <attr name="terraTextFieldState" format="enum">
+            <enum name="stateDefault" value="0" />
+            <enum name="active" value="1" />
+            <enum name="filled" value="2" />
+            <enum name="error" value="3" />
+            <enum name="disabled" value="4" />
+        </attr>
+        <attr name="terraTextFieldLabelText" format="string" />
+        <attr name="terraTextFieldHelperText" format="string" />
+        <attr name="terraTextFieldPrefixText" format="string" />
+        <attr name="terraTextFieldSuffixText" format="string" />
+        <attr name="terraTextFieldLeftIcon" format="reference" />
+        <attr name="terraTextFieldRightIcon" format="reference" />
+        <attr name="terraTextFieldPrefixIcon" format="reference" />
+        <attr name="terraTextFieldHasLabel" format="boolean" />
+        <attr name="terraTextFieldHasHelperText" format="boolean" />
+        <attr name="terraTextFieldHasLeftIcon" format="boolean" />
+        <attr name="terraTextFieldHasRightIcon" format="boolean" />
+        <attr name="terraTextFieldHasPrefixIcon" format="boolean" />
+    </declare-styleable>
+</resources>

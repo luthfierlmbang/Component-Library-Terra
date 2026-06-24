@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/terraBottomNavHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/terraBottomNavHomeIconContainer"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:foregroundGravity="center">
+
+            <ImageView
+                android:id="@+id/terraBottomNavHomeIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:padding="5dp" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/terraBottomNavHomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Home" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/terraBottomNavActivity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/terraBottomNavActivityIconContainer"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:foregroundGravity="center">
+
+            <ImageView
+                android:id="@+id/terraBottomNavActivityIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:padding="5dp" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/terraBottomNavActivityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Aktivitas Harian" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/terraBottomNavNotification"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/terraBottomNavNotificationIconContainer"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:foregroundGravity="center">
+
+            <ImageView
+                android:id="@+id/terraBottomNavNotificationIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:padding="5dp" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/terraBottomNavNotificationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Notifikasi" />
+    </LinearLayout>
+</LinearLayout>

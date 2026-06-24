@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.terra.design.components.TerraMenuCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu Name"
+            app:terraLeadIcon="@drawable/information"
+            app:terraRightIcon="@drawable/chevron_right"
+            app:terraShowLeadIcon="true"
+            app:terraShowRightIcon="true" />
+
+        <com.terra.design.components.TerraMenuCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Menu Without Right Icon"
+            app:terraLeadIcon="@drawable/search"
+            app:terraShowLeadIcon="true"
+            app:terraShowRightIcon="false" />
+
+        <com.terra.design.components.TerraInformationCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:terraButtonText="Button"
+            app:terraCardTitle="Label"
+            app:terraInfoLabel1="Write Information Here..."
+            app:terraInfoLabel2="Write Information Here..."
+            app:terraInfoValue1="Write Information Here..."
+            app:terraInfoValue2="Write Information Here..."
+            app:terraProfileImage="@drawable/default"
+            app:terraProfileName="Siti Burhan"
+            app:terraProfileSubtitle="NIK 1111 2222 3333 4444"
+            app:terraShowButton="true"
+            app:terraShowProfile="true"
+            app:terraStatusLabel="Belum Terdaftar" />
+
+        <com.terra.design.components.TerraActivityCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:terraActionText="Atur Jam"
+            app:terraActivityName="Input Activity"
+            app:terraActivityTime="Input Time"
+            app:terraLabelText="Label Name"
+            app:terraRightIcon="@drawable/kebab_horizontal"
+            app:terraShowAction="true"
+            app:terraTimeIcon="@drawable/time" />
+
+        <com.terra.design.components.TerraChip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="This is Chips"
+            app:terraChipSelected="false" />
+
+        <com.terra.design.components.TerraChip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="This is Chips"
+            app:terraChipLeftIcon="@drawable/plus"
+            app:terraChipRightIcon="@drawable/close"
+            app:terraChipSelected="true"
+            app:terraChipShowLeftIcon="true"
+            app:terraChipShowRightIcon="true" />
+
+        <com.terra.design.components.TerraChip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="This is Chips"
+            app:terraChipCounterText="2"
+            app:terraChipHasCounter="true"
+            app:terraChipSelected="false" />
+
+        <com.terra.design.components.TerraIncentiveMetricCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:terraMetricAmount="Rp403.100"
+            app:terraMetricLeadIcon="@drawable/information"
+            app:terraMetricPeriod="Periode September 2020"
+            app:terraMetricRightIcon="@drawable/chevron_right"
+            app:terraMetricTitle="Insentif Nasabah Aktif"
+            app:terraMetricVariant="customerActive" />
+
+        <com.terra.design.components.TerraIncentiveMetricCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:terraMetricAmount="Rp1.072.200"
+            app:terraMetricLeadIcon="@drawable/information"
+            app:terraMetricPeriod="Periode Juli 2020 - Desember 2020"
+            app:terraMetricRightIcon="@drawable/chevron_right"
+            app:terraMetricTitle="Total Insentif Ditabung"
+            app:terraMetricVariant="totalDitabung" />
+
+        <com.terra.design.components.TerraIncentiveMetricCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:terraMetricAmount="Rp286.000"
+            app:terraMetricLeadIcon="@drawable/information"
+            app:terraMetricPeriod="Periode Juli 2020"
+            app:terraMetricRightIcon="@drawable/chevron_right"
+            app:terraMetricTitle="Insentif Pencairan"
+            app:terraMetricVariant="pencairan" />
+
+        <com.terra.design.components.TerraIncentiveInfoCard
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:terraInfoCardDescription="Informasi pencapaian target pencairan dan nasabah yang kamu lakukan."
+            app:terraInfoCardLeadIcon="@drawable/settings"
+            app:terraInfoCardRightIcon="@drawable/chevron_right"
+            app:terraInfoCardTitle="Kinerjaku" />
+
+        <com.terra.design.components.TerraImageUpload
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:terraImageUploadHelperText="Helper Type Here"
+            app:terraImageUploadLabel="Label"
+            app:terraImageUploadPrimaryActionText="Ambil Gambar"
+            app:terraImageUploadShowHelper="true"
+            app:terraImageUploadState="imageUpload" />
+
+        <com.terra.design.components.TerraImageUpload
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:terraImageUploadHelperText="Helper Type Here"
+            app:terraImageUploadLabel="Label"
+            app:terraImageUploadLoadingText="Dalam Proses..."
+            app:terraImageUploadPreviewSrc="@drawable/default"
+            app:terraImageUploadShowHelper="true"
+            app:terraImageUploadState="attachProcess" />
+
+        <com.terra.design.components.TerraImageUpload
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:terraImageUploadActionCount="1"
+            app:terraImageUploadHelperText="Helper Type Here"
+            app:terraImageUploadLabel="Label"
+            app:terraImageUploadPreviewSrc="@drawable/default"
+            app:terraImageUploadSecondaryActionText="Lihat"
+            app:terraImageUploadShowHelper="true"
+            app:terraImageUploadState="imageAttached" />
+
+        <com.terra.design.components.TerraImageUpload
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:terraImageUploadActionCount="2"
+            app:terraImageUploadHelperText="Helper Type Here"
+            app:terraImageUploadLabel="Label"
+            app:terraImageUploadPreviewSrc="@drawable/default"
+            app:terraImageUploadSecondaryActionText="Ubah"
+            app:terraImageUploadShowHelper="true"
+            app:terraImageUploadState="imageAttached"
+            app:terraImageUploadTertiaryActionText="Lihat" />
+
+        <com.terra.design.components.TerraLabelBadge
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Label Name"
+            app:terraLabelBadgeIcon="@drawable/check"
+            app:terraLabelBadgeShowIcon="true"
+            app:terraLabelBadgeState="default" />
+
+        <com.terra.design.components.TerraLabelBadge
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Label Name"
+            app:terraLabelBadgeIcon="@drawable/check"
+            app:terraLabelBadgeShowIcon="true"
+            app:terraLabelBadgeState="secondary" />
+
+        <com.terra.design.components.TerraLabelBadge
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Label Name"
+            app:terraLabelBadgeIcon="@drawable/check"
+            app:terraLabelBadgeShowIcon="true"
+            app:terraLabelBadgeState="neutral" />
+
+        <com.terra.design.components.TerraLabelBadge
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Label Name"
+            app:terraLabelBadgeIcon="@drawable/check"
+            app:terraLabelBadgeShowIcon="true"
+            app:terraLabelBadgeState="failed" />
+
+        <com.terra.design.components.TerraLabelBadge
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="No Icon"
+            app:terraLabelBadgeShowIcon="false"
+            app:terraLabelBadgeState="default" />
+
+        <com.terra.design.components.TerraBottomNavBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:terraBottomNavSelectedItem="home" />
+
+        <com.terra.design.components.TerraBottomNavBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:terraBottomNavSelectedItem="activity" />
+
+        <com.terra.design.components.TerraBottomNavBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:terraBottomNavSelectedItem="notification" />
+
+        <com.terra.design.components.TerraBottomNavBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:terraBottomNavSelectedItem="none" />
+
+        <com.terra.design.components.TerraSearchBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Input Search Bar"
+            app:terraSearchBarState="default" />
+
+        <com.terra.design.components.TerraSearchBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Input Search Bar"
+            app:terraSearchBarState="focus" />
+
+        <com.terra.design.components.TerraSearchBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Input Search Bar"
+            app:terraSearchBarState="result" />
+
+        <com.terra.design.components.TerraSearchBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Input Search Bar"
+            app:terraSearchBarState="disabled" />
+
+        <com.terra.design.components.TerraRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="false"
+            android:enabled="true"
+            app:terraRadioButtonShowLabel="false" />
+
+        <com.terra.design.components.TerraRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="true"
+            android:enabled="true"
+            app:terraRadioButtonShowLabel="false" />
+
+        <com.terra.design.components.TerraRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="false"
+            android:enabled="false"
+            app:terraRadioButtonShowLabel="false" />
+
+        <com.terra.design.components.TerraRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="true"
+            android:enabled="false"
+            app:terraRadioButtonShowLabel="false" />
+
+        <com.terra.design.components.TerraRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="false"
+            android:enabled="true"
+            android:text="Label"
+            app:terraRadioButtonShowLabel="true" />
+
+        <com.terra.design.components.TerraRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="true"
+            android:enabled="true"
+            android:text="Label"
+            app:terraRadioButtonShowLabel="true" />
+
+        <com.terra.design.components.TerraRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="false"
+            android:enabled="false"
+            android:text="Label"
+            app:terraRadioButtonShowLabel="true" />
+
+        <com.terra.design.components.TerraRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="true"
+            android:enabled="false"
+            android:text="Label"
+            app:terraRadioButtonShowLabel="true" />
+
+        <com.terra.design.components.TerraCheckbox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="false"
+            android:enabled="true"
+            app:terraCheckboxShowLabel="false" />
+
+        <com.terra.design.components.TerraCheckbox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="true"
+            android:enabled="true"
+            app:terraCheckboxShowLabel="false" />
+
+        <com.terra.design.components.TerraCheckbox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="false"
+            android:enabled="false"
+            app:terraCheckboxShowLabel="false" />
+
+        <com.terra.design.components.TerraCheckbox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="true"
+            android:enabled="false"
+            app:terraCheckboxShowLabel="false" />
+
+        <com.terra.design.components.TerraCheckbox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="false"
+            android:enabled="true"
+            android:text="Label"
+            app:terraCheckboxShowLabel="true" />
+
+        <com.terra.design.components.TerraCheckbox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="true"
+            android:enabled="true"
+            android:text="Label"
+            app:terraCheckboxShowLabel="true" />
+
+        <com.terra.design.components.TerraCheckbox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="false"
+            android:enabled="false"
+            android:text="Label"
+            app:terraCheckboxShowLabel="true" />
+
+        <com.terra.design.components.TerraCheckbox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="true"
+            android:enabled="false"
+            android:text="Label"
+            app:terraCheckboxShowLabel="true" />
+
+        <com.terra.design.components.TerraTextField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Place Holder"
+            app:terraTextFieldHasLabel="true"
+            app:terraTextFieldLabelText="Label"
+            app:terraTextFieldState="stateDefault"
+            app:terraTextFieldType="typeDefault" />
+
+        <com.terra.design.components.TerraTextField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Place Holder"
+            app:terraTextFieldHasLabel="true"
+            app:terraTextFieldLabelText="Label"
+            app:terraTextFieldState="active"
+            app:terraTextFieldType="typeDefault" />
+
+        <com.terra.design.components.TerraTextField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Input Here"
+            app:terraTextFieldHasHelperText="true"
+            app:terraTextFieldHelperText="Helper Type Here"
+            app:terraTextFieldHasLabel="true"
+            app:terraTextFieldLabelText="Label"
+            app:terraTextFieldState="filled"
+            app:terraTextFieldType="typeDefault" />
+
+        <com.terra.design.components.TerraTextField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Input Here"
+            app:terraTextFieldHasHelperText="true"
+            app:terraTextFieldHelperText="Helper Type Here"
+            app:terraTextFieldHasLabel="true"
+            app:terraTextFieldLabelText="Label"
+            app:terraTextFieldState="error"
+            app:terraTextFieldType="typeDefault" />
+
+        <com.terra.design.components.TerraTextField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Place Holder"
+            app:terraTextFieldHasLabel="true"
+            app:terraTextFieldLabelText="Label"
+            app:terraTextFieldState="disabled"
+            app:terraTextFieldType="typeDefault" />
+
+        <com.terra.design.components.TerraTextField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="100.000"
+            app:terraTextFieldHasLabel="true"
+            app:terraTextFieldLabelText="Amount"
+            app:terraTextFieldPrefixText="Rp"
+            app:terraTextFieldState="filled"
+            app:terraTextFieldType="textPrefix" />
+
+        <com.terra.design.components.TerraTextField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="50"
+            app:terraTextFieldHasLabel="true"
+            app:terraTextFieldLabelText="Weight"
+            app:terraTextFieldState="filled"
+            app:terraTextFieldSuffixText="Kg"
+            app:terraTextFieldType="textSuffix" />
+
+        <com.terra.design.components.TerraTextField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="100.000"
+            app:terraTextFieldHasLabel="true"
+            app:terraTextFieldHasPrefixIcon="true"
+            app:terraTextFieldLabelText="Amount"
+            app:terraTextFieldPrefixIcon="@drawable/information"
+            app:terraTextFieldPrefixText="Rp"
+            app:terraTextFieldState="filled"
+            app:terraTextFieldType="textPrefixIconPrefix" />
+
+        <com.terra.design.components.TerraButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Primary Normal"
+            app:terraButtonType="primary"
+            app:terraButtonSize="normal" />
+
+        <com.terra.design.components.TerraButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Primary Small"
+            app:terraButtonType="primary"
+            app:terraButtonSize="small" />
+
+        <com.terra.design.components.TerraButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Secondary"
+            app:terraButtonType="secondary"
+            app:terraButtonSize="normal" />
+
+        <com.terra.design.components.TerraButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Outlined Primary"
+            app:terraButtonType="outlinedPrimary"
+            app:terraButtonSize="normal" />
+
+        <com.terra.design.components.TerraButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Outlined Secondary"
+            app:terraButtonType="outlinedSecondary"
+            app:terraButtonSize="normal" />
+
+        <com.terra.design.components.TerraButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Danger"
+            app:terraButtonType="danger"
+            app:terraButtonSize="normal" />
+
+        <com.terra.design.components.TerraButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Text Button"
+            app:terraButtonType="textButton"
+            app:terraButtonSize="normal" />
+
+        <com.terra.design.components.TerraButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:enabled="false"
+            android:text="Disabled Primary"
+            app:terraButtonType="primary"
+            app:terraButtonSize="normal" />
+
+        <com.terra.design.components.TerraButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Left Icon"
+            app:terraButtonType="primary"
+            app:terraButtonSize="normal"
+            app:terraLeftIcon="@drawable/information" />
+
+        <com.terra.design.components.TerraButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Both Icons"
+            app:terraButtonType="outlinedPrimary"
+            app:terraButtonSize="small"
+            app:terraLeftIcon="@drawable/arrow_left"
+            app:terraRightIcon="@drawable/chevron_right" />
+
+        <com.terra.design.components.TerraButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Search"
+            app:terraButtonType="secondary"
+            app:terraButtonSize="normal"
+            app:terraLeftIcon="@drawable/search" />
+
+        <com.terra.design.components.TerraButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Confirm"
+            app:terraButtonType="primary"
+            app:terraButtonSize="normal"
+            app:terraLeftIcon="@drawable/check" />
+
+        <com.terra.design.components.TerraButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Settings"
+            app:terraButtonType="textButton"
+            app:terraButtonSize="normal"
+            app:terraLeftIcon="@drawable/settings" />
+
+    </LinearLayout>
+</ScrollView>

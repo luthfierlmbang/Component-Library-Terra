@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Typography tokens -->
+    <style name="TextAppearance.Terra.Header.XL" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:fontFamily">@font/jenius_sans_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:lineHeight">32sp</item>
+        <item name="android:letterSpacing">0.011</item>
+    </style>
+
+    <style name="TextAppearance.Terra.Header.M" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:fontFamily">@font/jenius_sans_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:lineHeight">26sp</item>
+        <item name="android:letterSpacing">0.0125</item>
+    </style>
+
+    <style name="TextAppearance.Terra.Header.S" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:fontFamily">@font/jenius_sans_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineHeight">22sp</item>
+        <item name="android:letterSpacing">0.0111</item>
+    </style>
+
+    <style name="TextAppearance.Terra.Body.Medium.Bold" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:fontFamily">@font/jenius_sans_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineHeight">22sp</item>
+    </style>
+
+    <style name="TextAppearance.Terra.Body.Medium.Regular" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:fontFamily">@font/jenius_sans_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineHeight">22sp</item>
+    </style>
+
+    <style name="TextAppearance.Terra.Body.Small.Bold" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:fontFamily">@font/jenius_sans_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineHeight">22sp</item>
+    </style>
+
+    <style name="TextAppearance.Terra.Body.Small.Regular" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:fontFamily">@font/jenius_sans_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineHeight">20sp</item>
+    </style>
+
+    <style name="TextAppearance.Terra.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:fontFamily">@font/jenius_sans_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineHeight">20sp</item>
+    </style>
+
+    <style name="TextAppearance.Terra.Button.Medium" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:fontFamily">@font/jenius_sans_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextAppearance.Terra.Button.Small" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:fontFamily">@font/jenius_sans_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineHeight">24sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Shadow / elevation reference styles.
+         Android XML does not support Figma shadows 1:1, so these styles act as implementation guidance.
+         Pair them with shape/background/color tokens once primitive and semantic colors are available. -->
+    <style name="Widget.Terra.Shadow.Card" parent="">
+        <item name="android:elevation">4dp</item>
+    </style>
+</resources>

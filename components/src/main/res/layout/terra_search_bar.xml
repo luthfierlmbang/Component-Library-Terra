@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText
+        android:id="@+id/terraSearchBarInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@null"
+        android:hint="Input Search Bar"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="24dp"
+        android:padding="0dp"
+        android:textColorHint="#CCCCCC" />
+
+    <ImageView
+        android:id="@+id/terraSearchBarTrailingIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:importantForAccessibility="no" />
+</merge>
