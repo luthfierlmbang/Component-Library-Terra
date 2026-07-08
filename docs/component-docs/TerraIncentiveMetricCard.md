@@ -35,6 +35,12 @@ Tidak ada property/method publik selain attr. Variant dikelola via `Int` mentah 
     app:terraMetricRightIcon="@drawable/ic_arrow" />
 ```
 
+## Token dipakai
+
+- **Dimens**: `terra_radius_8`, `terra_spacing_16`, `terra_spacing_8`
+- **Typography**: `TextAppearance.Terra.Body.Medium.Bold`, `Caption`
+- **Color**: tidak ada token semantic langsung — background gradient di-hardcode manual per variant di `applyGradient()`, bukan lewat token warna.
+
 ## ⚠️ Known issue
 
 `setIcon()` internal tidak guard `resId == 0` (beda dari komponen lain yang pakai `isVisible = resId != 0`). Kalau `terraMetricLeadIcon`/`terraMetricRightIcon` tidak di-set di XML, berpotensi behavior gak terduga — selalu set attr icon eksplisit untuk komponen ini.

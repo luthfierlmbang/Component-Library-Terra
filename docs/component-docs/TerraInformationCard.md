@@ -23,6 +23,12 @@ Card profil + info key-value + tombol aksi. Reuse `TerraButton` untuk CTA.
 
 Tidak ada property/method publik selain attr — semua styling dibaca sekali saat `init`.
 
+## Token dipakai
+
+- **Color**: `terra_color_bg_default`, `terra_color_text_primary_default`, `terra_color_text_primary_disabled`, `terra_color_text_secondary_default`
+- **Dimens**: `terra_radius_8`, `terra_spacing_16`, `terra_spacing_4`
+- **Typography**: `TextAppearance.Terra.Body.Medium.Bold`, `Body.Medium.Regular`, `Body.Small.Bold`, `Body.Small.Regular`
+
 ## Contoh XML
 
 ```xml

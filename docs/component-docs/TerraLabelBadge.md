@@ -26,6 +26,12 @@ fun setIcon(@DrawableRes resId: Int, visible: Boolean = true)
 
 Enum: `State { DEFAULT, SECONDARY, NEUTRAL, FAILED }`.
 
+## Token dipakai
+
+- **Color**: `terra_color_bg_fill_danger_default`, `terra_color_bg_fill_secondary_default`, `terra_color_grey_500` (⚠️ primitive), `terra_color_icon_inverse_default`, `terra_color_teal_700` (⚠️ primitive), `terra_color_text_inverse_default`
+- **Dimens**: `terra_spacing_20`, `terra_spacing_4`, `terra_spacing_8`
+- **Typography**: `TextAppearance.Terra.Caption`
+
 ## Contoh XML
 
 ```xml

@@ -30,6 +30,12 @@ fun setRightIconResource(@DrawableRes resId: Int)
     app:terraShowRightIcon="true" />
 ```
 
+## Token dipakai
+
+- **Color**: `terra_color_bg_default`, `terra_color_icon_primary_default`, `terra_color_text_primary_default`
+- **Dimens**: `terra_radius_8`, `terra_spacing_16`, `terra_spacing_24`
+- **Typography**: `TextAppearance.Terra.Header.S`
+
 ## ⚠️ Known issue
 
 `setLeadIconResource()` / `setRightIconResource()` dipanggil setelah init selalu paksa icon jadi visible, override attr `terraShowLeadIcon`/`terraShowRightIcon` yang di-set di XML.

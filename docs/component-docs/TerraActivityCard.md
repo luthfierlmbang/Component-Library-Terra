@@ -34,6 +34,12 @@ Tidak ada property/method publik selain attr.
     app:terraShowAction="true" />
 ```
 
+## Token dipakai
+
+- **Color**: `terra_color_bg_default`, `terra_color_bg_fill_secondary_default`, `terra_color_text_inverse_default`, `terra_color_text_primary_default`
+- **Dimens**: `terra_radius_8`, `terra_spacing_16`, `terra_spacing_4`
+- **Typography**: `TextAppearance.Terra.Body.Medium.Regular`
+
 ## Catatan
 
 Banyak dimensi (padding, margin) di `terra_activity_card.xml` masih hardcoded dp (8dp, 2dp, 12dp, 4dp, 1dp, 16dp) — belum pakai token `terra_spacing_*`. Lihat [tokens.md](tokens.md).

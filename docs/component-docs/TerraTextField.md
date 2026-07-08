@@ -48,6 +48,14 @@ Enum: `Type { DEFAULT, TEXT_PREFIX, TEXT_SUFFIX, TEXT_PREFIX_ICON_PREFIX }`, `St
     app:terraTextFieldHasLabel="true" />
 ```
 
+## Token dipakai
+
+Semua dari module `design-tokens` (lihat [tokens.md](tokens.md)).
+
+- **Color**: `terra_color_bg_default`, `terra_color_bg_fill_danger_default`, `terra_color_bg_fill_primary_default`, `terra_color_bg_surface_secondary_default`, `terra_color_border_secondary_default`, `terra_color_text_primary_default`, `terra_color_text_primary_disabled`, `terra_color_text_secondary_default`
+- **Dimens**: `terra_radius_8`
+- **Typography**: `TextAppearance.Terra.Body.Medium.Bold`, `Body.Medium.Regular`, `Body.Small.Bold`, `Body.Small.Regular`, `Caption`
+
 ## ⚠️ Known issue
 
 Satu-satunya text input di library ini yang **tidak** expose `setText`/`getText`/`setHint` publik — beda dari `TerraSearchBar` yang punya API itu. Text runtime cuma bisa diakses lewat `findViewById` manual ke `EditText` internal (tidak direkomendasikan, karena internal view bersifat private/implementation detail).

@@ -21,6 +21,11 @@ fun setText(text: CharSequence?)
 override fun setEnabled(enabled: Boolean)
 ```
 
+## Token dipakai
+
+- **Color**: `terra_color_bg_fill_primary_default`, `terra_color_grey_400` (⚠️ primitive), `terra_color_grey_500` (⚠️ primitive), `terra_color_text_secondary_default`
+- **Typography**: `TextAppearance.Terra.Body.Medium.Bold`, `Body.Medium.Regular`
+
 ## Contoh XML
 
 ```xml

@@ -37,6 +37,12 @@ fun setRightIconResource(@DrawableRes resId: Int)
     app:terraChipCounterText="3" />
 ```
 
+## Token dipakai
+
+- **Color**: `terra_color_bg_fill_danger_default`, `terra_color_border_action_primary_default`, `terra_color_grey_500` (⚠️ primitive), `terra_color_teal_50` (⚠️ primitive), `terra_color_text_action_primary_default`
+- **Dimens**: `terra_radius_8`, `terra_size_icon_20`, `terra_spacing_16`, `terra_spacing_4`, `terra_spacing_8`
+- **Typography**: `TextAppearance.Terra.Body.Small.Bold`, `Body.Small.Regular`
+
 ## ⚠️ Known issue
 
 `setLeftIconResource()` / `setRightIconResource()` dipanggil setelah init **selalu paksa icon jadi visible**, override attr `terraChipShowLeftIcon`/`terraChipShowRightIcon` yang di-set di XML. Kalau butuh icon tersembunyi dinamis, jangan pakai method ini setelah constructor selesai.

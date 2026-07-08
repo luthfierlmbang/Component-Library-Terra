@@ -1,6 +1,19 @@
 # Design Tokens
 
-Module: `design-tokens/src/main/res/values/`. 2 layer: primitive → semantic. Semua nama prefix `terra_*`.
+## Sumber token (dari mana ambilnya)
+
+Semua token didefinisikan di module **`design-tokens`**, module paling bawah di dependency graph (`sample → components → design-tokens`). `components` mengonsumsi lewat `project(":design-tokens")` di `components/build.gradle.kts`, jadi tiap resource `R.color.terra_*` / `R.dimen.terra_*` / `R.style.TextAppearance_Terra_*` yang dipanggil di kode `components` sebenarnya datang dari module ini, bukan didefinisikan ulang di `components`.
+
+File sumber per kategori:
+
+| Kategori | File |
+|---|---|
+| Color (primitive + semantic) | `design-tokens/src/main/res/values/colors.xml` |
+| Dimens (spacing, radius, size) | `design-tokens/src/main/res/values/dimens.xml` |
+| Typography (`TextAppearance.Terra.*`) & shadow style | `design-tokens/src/main/res/values/styles.xml` |
+| Font family (`jenius_sans_bold`/`_regular`) | `design-tokens/src/main/res/font/` |
+
+2 layer warna: **primitive** (raw hex, mis. `terra_color_grey_500`) → **semantic** (alias by-purpose, mis. `terra_color_text_primary_default` → nunjuk ke primitive). Semua nama prefix `terra_*`. Komponen di module `components` **hanya boleh** pakai token semantic/dimens/typography ini (lewat `@color/`, `@dimen/`, `@style/` di XML atau `R.color.`/`R.dimen.`/`R.style.` di Kotlin) — bukan hardcode hex/dp, walau kenyataannya masih ada pelanggaran (lihat catatan tiap section & [README.md](README.md) known issues).
 
 ## Color
 
@@ -130,6 +143,29 @@ Font: `jenius_sans_bold` / `jenius_sans_regular`.
 ## Shadow / Elevation
 
 `Widget.Terra.Shadow.Card` — cuma `android:elevation="4dp"`. Catatan di source: XML Android gak bisa reproduce shadow Figma 1:1, style ini cuma panduan implementasi, dipasangkan manual dengan shape/background/color token.
+
+## Dipakai di mana (token usage per komponen)
+
+Hasil grep aktual `R.color.terra_*` / `R.dimen.terra_*` / `R.style.TextAppearance_Terra_*` di tiap file Kotlin komponen (`components/src/main/java/com/terra/design/components/*.kt`). Semua 14 komponen konsumsi token dari `design-tokens` — tidak ada yang nol.
+
+| Komponen | Token dipakai |
+|---|---|
+| `TerraButton` | `bg_disabled_default`, `bg_fill_danger_default`, `bg_fill_primary_default`, `bg_fill_secondary_default`, `border_action_primary_default`, `border_action_secondary_default`, `border_disabled_default`, `text_action_primary_default`, `text_inverse_default`, `text_primary_disabled`, `radius_6`, `radius_8`, `size_button_height_normal`, `size_button_height_small`, `size_icon_20`, `size_icon_24`, `spacing_16`, `spacing_32`, `spacing_4`, `spacing_8`, `Button.Medium`, `Button.Small` |
+| `TerraTextField` | `bg_default`, `bg_fill_danger_default`, `bg_fill_primary_default`, `bg_surface_secondary_default`, `border_secondary_default`, `text_primary_default`, `text_primary_disabled`, `text_secondary_default`, `radius_8`, `Body.Medium.Bold`, `Body.Medium.Regular`, `Body.Small.Bold`, `Body.Small.Regular`, `Caption` |
+| `TerraCheckbox` | `bg_default`, `grey_400`, `grey_500`, `text_primary_default`, `text_secondary_default`, `Body.Medium.Bold`, `Body.Medium.Regular` |
+| `TerraRadioButton` | `bg_fill_primary_default`, `grey_400`, `grey_500`, `text_secondary_default`, `Body.Medium.Bold`, `Body.Medium.Regular` |
+| `TerraChip` | `bg_fill_danger_default`, `border_action_primary_default`, `grey_500`, `teal_50`, `text_action_primary_default`, `radius_8`, `size_icon_20`, `spacing_16`, `spacing_4`, `spacing_8`, `Body.Small.Bold`, `Body.Small.Regular` |
+| `TerraSearchBar` | `bg_default`, `bg_fill_primary_default`, `border_secondary_default`, `grey_200`, `text_primary_default`, `text_primary_disabled`, `radius_8`, `spacing_8`, `Body.Medium.Bold`, `Body.Medium.Regular` |
+| `TerraMenuCard` | `bg_default`, `icon_primary_default`, `text_primary_default`, `radius_8`, `spacing_16`, `spacing_24`, `Header.S` |
+| `TerraInformationCard` | `bg_default`, `text_primary_default`, `text_primary_disabled`, `text_secondary_default`, `radius_8`, `spacing_16`, `spacing_4`, `Body.Medium.Bold`, `Body.Medium.Regular`, `Body.Small.Bold`, `Body.Small.Regular` |
+| `TerraActivityCard` | `bg_default`, `bg_fill_secondary_default`, `text_inverse_default`, `text_primary_default`, `radius_8`, `spacing_16`, `spacing_4`, `Body.Medium.Regular` |
+| `TerraIncentiveMetricCard` | `radius_8`, `spacing_16`, `spacing_8`, `Body.Medium.Bold`, `Caption` — *(catatan: gradient background-nya di-hardcode manual di `applyGradient()`, bukan lewat token warna semantic)* |
+| `TerraIncentiveInfoCard` | `bg_default`, `icon_primary_default`, `text_primary_default`, `text_secondary_default`, `radius_8`, `spacing_16`, `spacing_8`, `Caption`, `Header.S` |
+| `TerraLabelBadge` | `bg_fill_danger_default`, `bg_fill_secondary_default`, `grey_500`, `icon_inverse_default`, `teal_700`, `text_inverse_default`, `spacing_20`, `spacing_4`, `spacing_8`, `Caption` |
+| `TerraBottomNavBar` | `bg_default`, `bg_fill_primary_default`, `text_secondary_default`, `Caption` |
+| `TerraImageUpload` | `bg_default`, `border_secondary_default`, `icon_primary_default`, `text_secondary_default`, `radius_8`, `Body.Small.Regular`, `Caption` |
+
+Catatan: beberapa komponen (`TerraChip`, `TerraCheckbox`, `TerraRadioButton`, `TerraLabelBadge`, dll) langsung pakai **token primitive** (`grey_400`, `grey_500`, `teal_50`, `teal_700`) alih-alih semantic — sedikit inkonsisten dibanding komponen lain yang disiplin cuma pakai semantic layer.
 
 ## Status
 

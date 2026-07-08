@@ -44,6 +44,12 @@ Enum: `State { IMAGE_UPLOAD, ATTACH_PROCESS, IMAGE_ATTACHED }`.
     app:terraImageUploadActionCount="2" />
 ```
 
+## Token dipakai
+
+- **Color**: `terra_color_bg_default`, `terra_color_border_secondary_default`, `terra_color_icon_primary_default`, `terra_color_text_secondary_default`
+- **Dimens**: `terra_radius_8`
+- **Typography**: `TextAppearance.Terra.Body.Small.Regular`, `Caption`
+
 ## Catatan
 
 Icon kamera default selalu hardcode ke `R.drawable.information` (bukan icon kamera beneran) — belum ada attr khusus untuk override ini di XML, harus dipanggil manual lewat `setCameraIconResource()`.
