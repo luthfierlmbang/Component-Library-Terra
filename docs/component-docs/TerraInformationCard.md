@@ -4,6 +4,22 @@ Card profil + info key-value + tombol aksi. Reuse `TerraButton` untuk CTA.
 
 `components/src/main/java/com/terra/design/components/TerraInformationCard.kt` · base: `LinearLayout`
 
+## Kapan Dipakai
+
+Card detail entitas: profil + status + sampai 2 pasang label-value + tombol aksi opsional (mis. detail nasabah/pinjaman). Bukan untuk log aktivitas berurutan (pakai `TerraActivityCard`) atau metrik angka besar (pakai `TerraIncentiveMetricCard`).
+
+## Do
+
+- Set `terraShowProfile="false"` kalau card gak butuh header foto+nama (mis. card info tanpa konteks personal).
+- Set `terraShowButton="false"` kalau card murni display, tanpa aksi lanjutan.
+- Manfaatkan 2 slot label-value (`terraInfoLabel1/Value1`, `terraInfoLabel2/Value2`) — jangan paksa lebih dari 2 pasang, kalau butuh lebih, pertimbangkan komponen/layout baru, jangan hack dengan concat string ke satu value.
+
+## Don't
+
+- Jangan pakai buat riwayat/log aktivitas berurutan — pakai `TerraActivityCard`.
+- Jangan pakai buat angka metrik besar dengan gradient background — pakai `TerraIncentiveMetricCard`.
+- Jangan lupa isi `terraButtonText` kalau `terraShowButton="true"` — tombol kosong tanpa label bakal aneh di UI.
+
 ## XML Attrs (styleable `TerraInformationCard`)
 
 | Attr | Format | Default |

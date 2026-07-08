@@ -4,6 +4,21 @@ Komponen upload gambar dengan 3 state (upload/proses/attached), sampai 3 tombol 
 
 `components/src/main/java/com/terra/design/components/TerraImageUpload.kt` · base: `LinearLayout`
 
+## Kapan Dipakai
+
+Flow upload gambar (foto KTP, foto profil, dokumen) dengan 3 fase: belum upload → proses upload → sudah ter-attach, plus sampai 3 tombol aksi (ambil/ubah/lihat).
+
+## Do
+
+- Update `state` mengikuti lifecycle upload sebenarnya: `imageUpload` (awal) → `attachProcess` (lagi upload, tampilkan `terraImageUploadLoadingText`) → `imageAttached` (selesai, tampilkan preview via `setPreviewImage()`).
+- Set `terraImageUploadActionCount` sesuai jumlah tombol aksi yang relevan (1 = cuma primary action, 2+ = tampilkan secondary/tertiary + divider).
+- Panggil `setCameraIconResource()` manual kalau butuh icon kamera custom — default-nya salah (lihat Catatan di bawah).
+
+## Don't
+
+- Jangan biarkan icon kamera default (`R.drawable.information`) tampil di production — itu bukan icon kamera asli, wajib override via `setCameraIconResource()`.
+- Jangan skip state `attachProcess` untuk upload yang makan waktu (network call) — user butuh loading feedback, jangan lompat langsung `imageUpload` → `imageAttached`.
+
 ## XML Attrs (styleable `TerraImageUpload`)
 
 | Attr | Format | Default |

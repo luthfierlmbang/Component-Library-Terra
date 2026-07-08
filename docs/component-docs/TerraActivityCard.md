@@ -4,6 +4,21 @@ Card riwayat aktivitas: label, nama aktivitas, waktu, aksi opsional. Reuse `Terr
 
 `components/src/main/java/com/terra/design/components/TerraActivityCard.kt` · base: `LinearLayout`
 
+## Kapan Dipakai
+
+Item riwayat/log aktivitas dalam list (mis. list transaksi, timeline notifikasi) — label kategori + nama aktivitas + waktu + aksi opsional (Lihat Detail). Biasanya dipakai berulang di `RecyclerView`.
+
+## Do
+
+- Set `terraShowAction="false"` kalau item riwayat gak punya aksi lanjutan (murni informasi).
+- Pakai di dalam list/RecyclerView untuk riwayat berurutan — ini use-case utamanya.
+- Isi `terraActivityTime` dengan format waktu yang konsisten di seluruh list (mis. selalu "HH:mm" atau selalu relatif "2 jam lalu"), jangan campur format dalam satu list.
+
+## Don't
+
+- Jangan pakai untuk card detail single-entity dengan profil — pakai `TerraInformationCard`.
+- Jangan hardcode dp baru kalau nambah elemen ke layout ini — pakai token spacing (`terra_spacing_*`) yang sudah ada, ikutin token, jangan nambah hardcoded value baru (styling saat ini sendiri sudah menyalahi ini, jangan tambah lagi — lihat catatan di bawah).
+
 ## XML Attrs (styleable `TerraActivityCard`)
 
 | Attr | Format | Default |

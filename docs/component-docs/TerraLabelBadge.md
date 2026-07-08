@@ -4,6 +4,20 @@ Badge label kecil dengan 4 state warna + icon opsional.
 
 `components/src/main/java/com/terra/design/components/TerraLabelBadge.kt` · base: `LinearLayout`
 
+## Kapan Dipakai
+
+Badge status read-only kecil (mis. "Aktif", "Gagal", "Pending") menempel di card/row lain. Bukan buat elemen interaktif/toggle-able — untuk itu pakai `TerraChip`.
+
+## Do
+
+- Pilih `state` sesuai makna status: `stateDefault`/`secondary` untuk status positif/netral, `neutral` untuk status non-committal, `failed` untuk status gagal/error/danger.
+- Pakai sebagai anak/attachment ke komponen lain (card, row), bukan sebagai elemen berdiri sendiri di layout kosong.
+
+## Don't
+
+- Jangan bikin badge ini clickable/toggle — desainnya display-only. Kalau butuh interaktif, pakai `TerraChip`.
+- Jangan pakai `state="failed"` buat status yang sebenarnya cuma netral/informational — bisa nyesatin user (warna failed biasanya merah/danger).
+
 ## XML Attrs (styleable `TerraLabelBadge`)
 
 | Attr | Format | Default |

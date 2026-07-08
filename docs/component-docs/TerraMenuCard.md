@@ -2,6 +2,20 @@
 
 `components/src/main/java/com/terra/design/components/TerraMenuCard.kt` · base: `LinearLayout`
 
+## Kapan Dipakai
+
+Item menu navigasi bergaya list row (mis. "Pengaturan", "Bantuan") — lead icon + label + trailing icon (biasanya chevron), full-width row yang bisa diklik.
+
+## Do
+
+- Set `terraShowLeadIcon`/`terraShowRightIcon` di XML sesuai kebutuhan compose-time; kalau icon mau di-hide, JANGAN panggil `setLeadIconResource()`/`setRightIconResource()` sesudahnya (lihat Don't).
+- Pakai untuk list menu/settings, bukan untuk card info/summary — untuk itu pakai `TerraInformationCard`/`TerraActivityCard`.
+
+## Don't
+
+- Jangan panggil `setLeadIconResource()`/`setRightIconResource()` kalau attr `terraShowLeadIcon`/`terraShowRightIcon` di-set `false` di XML — method ini SELALU paksa icon visible, override flag show (bug diketahui). Kalau icon harus tetap hidden, jangan panggil method-nya.
+- Jangan tumpuk banyak field text/value di komponen ini — desainnya cuma single label + 2 icon slot, bukan card multi-info (pakai `TerraInformationCard` untuk itu).
+
 ## XML Attrs (styleable `TerraMenuCard`)
 
 | Attr | Format | Default |

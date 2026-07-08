@@ -4,6 +4,24 @@ Custom button, 6 type x 2 size dalam satu View.
 
 `components/src/main/java/com/terra/design/components/TerraButton.kt` · base: `LinearLayout`
 
+## Kapan Dipakai
+
+Semua tombol aksi (CTA) di layout Terra — primary action, secondary action, aksi danger (hapus/tolak), tombol text-only, tombol outline. Ini komponen tombol satu-satunya di library; jangan bikin `Button`/`MaterialButton` baru buat kebutuhan yang bisa ditutup 6 `terraButtonType` yang ada.
+
+## Do
+
+- Pakai `terraButtonType` sesuai hierarki aksi: `primary` untuk aksi utama layar (max 1 per layar/section), `secondary` untuk aksi kedua, `outlinedPrimary`/`outlinedSecondary` untuk aksi tersier, `danger` khusus aksi destruktif (hapus/batal/tolak), `textButton` untuk aksi low-emphasis (skip, lihat semua).
+- Pakai `terraButtonSize="small"` di ruang sempit (row list, inline card action); default `normal` untuk CTA utama.
+- Set icon lewat attr XML (`app:terraLeftIcon`/`app:terraRightIcon`) saat compose-time; pakai `setLeftIconResource()`/`setRightIconResource()` cuma kalau icon berubah dinamis runtime.
+- Reuse `TerraButton` sebagai child di komponen card lain (`TerraInformationCard`, `TerraActivityCard`, `TerraImageUpload` sudah begini) — jangan bikin tombol custom baru di dalam card baru.
+
+## Don't
+
+- Jangan bikin View button baru (`Button`, `MaterialButton`, custom) buat use-case yang sudah tercover 6 type di atas.
+- Jangan hardcode warna/dp/font di tombol baru — semua styling `TerraButton` sudah token-driven (`applyStyle()`), contoh yang harus diikuti komponen lain.
+- Jangan pasang lebih dari satu `primary` button yang keliatan bersamaan di satu layar/section — rusak hierarki visual.
+- Jangan panggil `setLeftIconResource`/`setRightIconResource` berulang di loop/onBind tanpa perlu — icon-nya statis per state, cukup di-set sekali.
+
 ## XML Attrs (styleable `TerraButton`)
 
 | Attr | Format | Default |

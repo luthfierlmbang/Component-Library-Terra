@@ -2,6 +2,21 @@
 
 `components/src/main/java/com/terra/design/components/TerraChip.kt` · base: `LinearLayout`
 
+## Kapan Dipakai
+
+Filter/tag toggle-able (kategori filter, tag pilihan) dengan opsi counter (badge angka). Bukan buat status statis non-interaktif — untuk itu pakai [TerraLabelBadge](TerraLabelBadge.md).
+
+## Do
+
+- Toggle `terraChipSelected` sebagai response ke tap user (biasanya di `setOnClickListener`, toggle manual — component gak auto-toggle sendiri saat diklik).
+- Pakai `terraChipHasCounter` + `terraChipCounterText` buat nunjukin jumlah (mis. "Kategori (3)").
+- Set icon lewat attr XML di compose-time bila statis.
+
+## Don't
+
+- Jangan panggil `setLeftIconResource()`/`setRightIconResource()` kalau maksudnya icon harus tetap hidden sesuai attr `terraChipShowLeftIcon="false"`/`terraChipShowRightIcon="false"` — method ini SELALU paksa `visible=true`, override attr (lihat Known issue di bawah). Kalau butuh icon hidden secara kondisional, jangan panggil method-nya sama sekali di kondisi itu.
+- Jangan pakai `TerraChip` buat badge status read-only (mis. "Aktif"/"Gagal") — pakai `TerraLabelBadge`.
+
 ## XML Attrs (styleable `TerraChip`)
 
 | Attr | Format | Default |

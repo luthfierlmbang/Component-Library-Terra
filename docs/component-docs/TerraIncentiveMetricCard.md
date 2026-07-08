@@ -4,6 +4,20 @@ Card metrik insentif dengan background gradient sesuai variant.
 
 `components/src/main/java/com/terra/design/components/TerraIncentiveMetricCard.kt` · base: `LinearLayout`
 
+## Kapan Dipakai
+
+Card highlight metrik/angka besar dengan background gradient bertema (dashboard insentif: jumlah customer aktif, total ditabung, pencairan). Bukan untuk card info deskriptif biasa — untuk itu pakai `TerraIncentiveInfoCard`.
+
+## Do
+
+- Pilih `terraMetricVariant` sesuai makna metrik: `customerActive` (gradient teal), `totalDitabung` (gradient hijau), `pencairan` (gradient biru) — jangan pilih variant asal, warnanya punya makna semantik per konteks dashboard.
+- Selalu set `terraMetricLeadIcon`/`terraMetricRightIcon` eksplisit di XML (lihat Known issue — kalau tidak di-set, berisiko behavior gak terduga).
+
+## Don't
+
+- Jangan biarkan `terraMetricLeadIcon`/`terraMetricRightIcon` kosong/tidak di-set — komponen ini TIDAK guard `resId == 0` (beda dari komponen lain), harus selalu diisi.
+- Jangan pakai untuk card deskripsi teks panjang — desainnya untuk angka/metrik ringkas, pakai `TerraIncentiveInfoCard` untuk deskripsi.
+
 ## XML Attrs (styleable `TerraIncentiveMetricCard`)
 
 | Attr | Format | Default |

@@ -4,6 +4,23 @@ Custom text input, support label, helper text, prefix/suffix text, prefix/left/r
 
 `components/src/main/java/com/terra/design/components/TerraTextField.kt` · base: `LinearLayout`
 
+## Kapan Dipakai
+
+Semua input teks form: nama, jumlah uang (prefix "Rp"), berat (suffix "Kg"), field dengan icon depan. Satu-satunya komponen text-input di library.
+
+## Do
+
+- Set `terraTextFieldState` sesuai lifecycle form: `stateDefault` → `active` (fokus) → `filled` (terisi) → `error` (validasi gagal, isi `terraTextFieldHelperText` dengan pesan error) → `disabled` (read-only/locked).
+- Pakai `terraTextFieldType="textPrefix"`/`"textSuffix"` buat input nominal (uang, satuan berat, dll), jangan taruh prefix/suffix manual sebagai teks di dalam hint.
+- Selalu isi `terraTextFieldLabelText` buat aksesibilitas — jangan cuma andalkan `android:hint`.
+- Kalau butuh baca/tulis text runtime, akses lewat `findViewById` ke child EditText sebagai workaround SEMENTARA, dan flag ke tim (lihat Known issue) — jangan asumsikan ada `setText`/`getText` publik.
+
+## Don't
+
+- Jangan bikin `EditText`/`TextInputLayout` custom baru buat kebutuhan form standar — ini sudah nutup 4 type x 5 state.
+- Jangan panggil method `setText`/`getText`/`setOnTextChangedListener` — TIDAK ADA di API publik komponen ini (beda dari `TerraSearchBar`). Kalau agent generate kode yang manggil ini, itu bug kompilasi.
+- Jangan set `terraTextFieldState="error"` tanpa isi `terraTextFieldHelperText` — user gak tau kenapa error.
+
 ## XML Attrs (styleable `TerraTextField`)
 
 | Attr | Format | Default |

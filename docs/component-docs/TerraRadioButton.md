@@ -2,6 +2,20 @@
 
 `components/src/main/java/com/terra/design/components/TerraRadioButton.kt` · base: `LinearLayout`
 
+## Kapan Dipakai
+
+Single-choice dari sekumpulan opsi (pilih metode pembayaran, pilih 1 dari beberapa jawaban). Kalau multi-select, pakai [TerraCheckbox](TerraCheckbox.md).
+
+## Do
+
+- Grup beberapa `TerraRadioButton` secara manual (component ini TIDAK auto-exclusive kayak `RadioGroup` Android) — agent/developer harus handle logic "cuma 1 yang checked" sendiri di level parent (uncheck yang lain saat salah satu dipilih).
+- Set `showLabel = true` + `android:text` kalau butuh label di samping radio.
+
+## Don't
+
+- Jangan asumsikan taruh banyak `TerraRadioButton` otomatis mutually-exclusive — tidak ada `RadioGroup` wrapper built-in di library ini, beda dari `android.widget.RadioButton`. Kalau lupa handle exclusivity manual, user bisa checked lebih dari satu.
+- Jangan pakai buat multi-select — pakai `TerraCheckbox`.
+
 ## XML Attrs (styleable `TerraRadioButton`)
 
 | Attr | Format | Default |

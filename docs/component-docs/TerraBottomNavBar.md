@@ -4,6 +4,20 @@ Bottom navigation bar 3 item (Home/Activity/Notification) + state none.
 
 `components/src/main/java/com/terra/design/components/TerraBottomNavBar.kt` · base: `LinearLayout`
 
+## Kapan Dipakai
+
+Bottom navigation bar utama app, fixed 3 tab (Home/Activity/Notification). Bukan buat tab bar custom dengan jumlah item beda — komponen ini hardcode 3 slot, gak bisa ditambah/dikurangi tab-nya.
+
+## Do
+
+- Set `terraBottomNavHomeIcon`/`terraBottomNavActivityIcon`/`terraBottomNavNotificationIcon` eksplisit di XML — jangan andalkan fallback default (`information`/`search`/`settings` icon), itu placeholder generik yang salah kontekstual buat production.
+- Update `selectedItem` mengikuti navigasi aktual (fragment/activity yang lagi aktif), satu Activity/Fragment root biasanya set ini sekali saat entry.
+
+## Don't
+
+- Jangan biarkan icon nav pakai fallback default di production — selalu override ketiga attr icon.
+- Jangan pakai komponen ini kalau app butuh lebih/kurang dari 3 tab — struktur ini fixed 3 item + state none, bukan dynamic list.
+
 ## XML Attrs (styleable `TerraBottomNavBar`)
 
 | Attr | Format | Default |

@@ -4,6 +4,15 @@ Dokumentasi API tiap komponen di module `components` + design token di module `d
 
 Sumber: source code aktual (`components/src/main/java/com/terra/design/components/`, `components/src/main/res/values/attrs.xml`, `design-tokens/src/main/res/values/`), bukan hasil generate otomatis — jadi dijaga sinkron manual tiap ada perubahan komponen.
 
+## Untuk AI agent
+
+Dokumen ini ditulis buat jadi rujukan AI agent (Claude Code atau sejenis) saat generate/edit layout & kode yang pakai Terra design system. Tiap file komponen punya section **"Kapan Dipakai"** dan **"Do"/"Don't"** — baca itu SEBELUM pilih komponen atau nulis kode:
+
+- Sebelum bikin View/komponen baru dari nol, cek dulu apa sudah ada komponen Terra yang cocok (lihat daftar di bawah + "Kapan Dipakai" tiap file).
+- Ikuti "Do" — itu pola pemakaian yang benar sesuai desain komponennya.
+- Jangan langgar "Don't" — biasanya nunjuk ke bug/limitation nyata di source (lihat juga Known issues di bawah), bukan sekadar gaya preferensi.
+- Kalau butuh styling baru (warna/spacing/font), cek [tokens.md](tokens.md) dulu — jangan hardcode value kalau token yang setara sudah ada.
+
 ## Isi
 
 - [tokens.md](tokens.md) — design token: color, dimens, typography

@@ -2,6 +2,20 @@
 
 `components/src/main/java/com/terra/design/components/TerraSearchBar.kt` · base: `LinearLayout`
 
+## Kapan Dipakai
+
+Search input di top bar / halaman list yang bisa difilter. Punya 4 state visual: `stateDefault` (belum interaksi), `focus` (lagi diketik), `result` (ada hasil/query terisi), `disabled`.
+
+## Do
+
+- Update `state` mengikuti lifecycle interaksi: `stateDefault` → `focus` saat field di-tap → `result` saat ada teks/hasil pencarian.
+- Kalau butuh custom trailing icon (misal icon clear "x" custom) DAN state berubah-ubah runtime, panggil `setTrailingIcon()` ULANG setiap habis ganti `state` (lihat Known issue — jangan cuma set sekali di awal lalu berharap bertahan).
+
+## Don't
+
+- Jangan set `terraSearchBarTrailingIcon` di XML lalu ubah `state` secara runtime dan berharap custom icon-nya tetap — bakal ke-reset ke default tiap `state` berubah (bug diketahui, `TerraSearchBar.kt:109`). Selalu re-set trailing icon manual setelah ganti state kalau butuh custom icon.
+- Jangan pakai buat text input biasa (nama, form) — pakai `TerraTextField`.
+
 ## XML Attrs (styleable `TerraSearchBar`)
 
 | Attr | Format | Default |
